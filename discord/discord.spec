@@ -13,58 +13,58 @@ Source0:        discord-0.0.16.tar.gz
 This is a spec file that can be used to create a discord rpm. 
 
 %prep 
-#%setup -n Discord
+%setup -n Discord
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT/usr/share/Discord/
-install -d $RPM_BUILD_ROOT/usr/share/applications/
-install -d $RPM_BUILD_ROOT/usr/share/Discord/locales/
-install -d $RPM_BUILD_ROOT/usr/share/Discord/resources/
-install -d $RPM_BUILD_ROOT/usr/share/Discord/swiftshader/
+install -d $RPM_BUILD_ROOT/%{_datarootdir}/Discord/
+install -d $RPM_BUILD_ROOT/%{_datarootdir}/applications/
+install -d $RPM_BUILD_ROOT/%{_datarootdir}/Discord/locales/
+install -d $RPM_BUILD_ROOT/%{_datarootdir}/Discord/resources/
+install -d $RPM_BUILD_ROOT/%{_datarootdir}/Discord/swiftshader/
 
 
-install Discord/chrome_100_percent.pak $RPM_BUILD_ROOT/usr/share/Discord/
-install Discord/chrome_200_percent.pak $RPM_BUILD_ROOT/usr/share/Discord/
-install Discord/chrome-sandbox $RPM_BUILD_ROOT/usr/share/Discord/
-install Discord/Discord $RPM_BUILD_ROOT/usr/share/Discord/
-install Discord/discord.desktop $RPM_BUILD_ROOT/usr/share/applications/
-install Discord/discord.png $RPM_BUILD_ROOT/usr/share/Discord/
-install Discord/icudtl.dat $RPM_BUILD_ROOT/usr/share/Discord/
-install Discord/libEGL.so $RPM_BUILD_ROOT/usr/share/Discord/
-install Discord/libffmpeg.so $RPM_BUILD_ROOT/usr/share/Discord/
-install Discord/libGLESv2.so $RPM_BUILD_ROOT/usr/share/Discord/
-install Discord/libvk_swiftshader.so $RPM_BUILD_ROOT/usr/share/Discord/
-install Discord/postinst.sh $RPM_BUILD_ROOT/usr/share/Discord/
-install Discord/resources.pak $RPM_BUILD_ROOT/usr/share/Discord/
-install Discord/snapshot_blob.bin $RPM_BUILD_ROOT/usr/share/Discord/
-install Discord/v8_context_snapshot.bin $RPM_BUILD_ROOT/usr/share/Discord/
-install -d Discord/locales/ $RPM_BUILD_ROOT/usr/share/Discord/
-install -d Discord/resources/ $RPM_BUILD_ROOT/usr/share/Discord/
-install -d Discord/swiftshader/ $RPM_BUILD_ROOT/usr/share/Discord/
+install %{_builddir}/Discord/chrome_100_percent.pak $RPM_BUILD_ROOT/%{_datarootdir}/Discord/
+install %{_builddir}/Discord/chrome_200_percent.pak $RPM_BUILD_ROOT/%{_datarootdir}/Discord/
+install %{_builddir}/Discord/chrome-sandbox $RPM_BUILD_ROOT/%{_datarootdir}/Discord/
+install %{_builddir}/Discord/Discord $RPM_BUILD_ROOT/%{_datarootdir}/Discord/
+install %{_builddir}/Discord/discord.desktop $RPM_BUILD_ROOT/%{_datarootdir}/applications/
+install %{_builddir}/Discord/discord.png $RPM_BUILD_ROOT/%{_datarootdir}/Discord/
+install %{_builddir}/Discord/icudtl.dat $RPM_BUILD_ROOT/%{_datarootdir}/Discord/
+install %{_builddir}/Discord/libEGL.so $RPM_BUILD_ROOT/%{_datarootdir}/Discord/
+install %{_builddir}/Discord/libffmpeg.so $RPM_BUILD_ROOT/%{_datarootdir}/Discord/
+install %{_builddir}/Discord/libGLESv2.so $RPM_BUILD_ROOT/%{_datarootdir}/Discord/
+install %{_builddir}/Discord/libvk_swiftshader.so $RPM_BUILD_ROOT/%{_datarootdir}/Discord/
+install %{_builddir}/Discord/postinst.sh $RPM_BUILD_ROOT/%{_datarootdir}/Discord/
+install %{_builddir}/Discord/resources.pak $RPM_BUILD_ROOT/%{_datarootdir}/Discord/
+install %{_builddir}/Discord/snapshot_blob.bin $RPM_BUILD_ROOT/%{_datarootdir}/Discord/
+install %{_builddir}/Discord/v8_context_snapshot.bin $RPM_BUILD_ROOT/%{_datarootdir}/Discord/
+install -d %{_builddir}/Discord/locales/ $RPM_BUILD_ROOT/%{_datarootdir}/Discord/
+install -d %{_builddir}/Discord/resources/ $RPM_BUILD_ROOT/%{_datarootdir}/Discord/
+install -d %{_builddir}/Discord/swiftshader/ $RPM_BUILD_ROOT/%{_datarootdir}/Discord/
 
 
 %files
 %attr(0744, root, root)
-/usr/share/Discord/chrome_100_percent.pak
-/usr/share/Discord/chrome_200_percent.pak
-/usr/share/Discord/chrome-sandbox
-/usr/share/Discord/Discord
-/usr/share/applications/discord.desktop
-/usr/share/Discord/discord.png
-/usr/share/Discord/icudtl.dat
-/usr/share/Discord/libEGL.so
-/usr/share/Discord/libffmpeg.so
-/usr/share/Discord/libGLESv2.so
-/usr/share/Discord/libvk_swiftshader.so
-/usr/share/Discord/locales/
-/usr/share/Discord/postinst.sh
-/usr/share/Discord/resources/
-/usr/share/Discord/resources.pak
-/usr/share/Discord/snapshot_blob.bin
-/usr/share/Discord/swiftshader/
-/usr/share/Discord/v8_context_snapshot.bin
+%{_datarootdir}/Discord/chrome_100_percent.pak
+%{_datarootdir}/Discord/chrome_200_percent.pak
+%{_datarootdir}/Discord/chrome-sandbox
+%{_datarootdir}/Discord/Discord
+%{_datarootdir}/applications/discord.desktop
+%{_datarootdir}/Discord/discord.png
+%{_datarootdir}/Discord/icudtl.dat
+%{_datarootdir}/Discord/libEGL.so
+%{_datarootdir}/Discord/libffmpeg.so
+%{_datarootdir}/Discord/libGLESv2.so
+%{_datarootdir}/Discord/libvk_swiftshader.so
+%{_datarootdir}/Discord/locales/
+%{_datarootdir}/Discord/postinst.sh
+%{_datarootdir}/Discord/resources/
+%{_datarootdir}/Discord/resources.pak
+%{_datarootdir}/Discord/snapshot_blob.bin
+%{_datarootdir}/Discord/swiftshader/
+%{_datarootdir}/Discord/v8_context_snapshot.bin
 
 
 %changelog
