@@ -9,10 +9,11 @@ Source0:        discord-0.0.16.tar.gz
 
 
 
-%description This is a spec file that can be used to create a discord rpm. 
+%description 
+This is a spec file that can be used to create a discord rpm. 
 
-
-%setup -n Discord
+%prep 
+#%setup -n Discord
 
 %install
 rm -rf $RPM_BUILD_ROOT
