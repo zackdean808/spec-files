@@ -1,11 +1,11 @@
 Name:           discord
-Version:        0.0.16
+Version:        0.0.18
 Release:        1%{?dist}
 Summary:        This is a community supported spec file for packaging discord as an rpm. 
 
 License:        GPL-2.0
 URL:            https://discord.com/download
-Source0:        discord-0.0.16.tar.gz
+Source0:        discord-0.0.18.tar.gz
 
 
 
