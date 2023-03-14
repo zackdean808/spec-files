@@ -80,8 +80,8 @@ cp -a  %{_builddir}/Discord/resources $RPM_BUILD_ROOT/%{_datarootdir}/discord/
   - New Version -> 0.25
   - bug fix of cp -r to cp -a 
 * Sun Oct 02 2022 Zack D. <zack.dean@gmail.com>
-- New version 
-- Moved evertying to /%{_datarootdir} 
+  - New version 
+  - Moved evertying to /%{_datarootdir} 
 
 * Sun Dec 05 2021 Zack D. <zack.dean@gmail.com>
-- initial build 
+  - initial build 
