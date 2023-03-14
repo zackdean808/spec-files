@@ -1,12 +1,12 @@
 Name:           discord
 Version:        0.0.25
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        This is a community supported spec file for packaging discord as an rpm. 
 
 License:        GPL-2.0
 URL:            https://discord.com/download
 Source0:        discord-0.0.25.tar.gz
-
+Patch0:		desktop.patch
 
 
 %description 
@@ -14,6 +14,7 @@ This is a spec file that can be used to create a discord rpm.
 
 %prep 
 %setup -n Discord
+%patch0 -p1 
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -70,6 +71,11 @@ cp -a  %{_builddir}/Discord/resources $RPM_BUILD_ROOT/%{_datarootdir}/discord/
 %{_datarootdir}/discord/resources/build_info.json
 
 %changelog
+
+* Mon Mar 13 2023 Zack D. <zack.dean@gmail.com> 
+  - Added patch0 to fix path in the /usr/share/applications directory 
+  - updated build verison 
+
 * Mon Mar 13 2023 Zack D. <zack.dean@gmail.com> 
   - New Version -> 0.25
   - bug fix of cp -r to cp -a 
