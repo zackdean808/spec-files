@@ -1,0 +1,13 @@
+diff -urN Discord-orig/discord.desktop Discord/discord.desktop
+--- Discord-orig/discord.desktop	2023-02-13 15:24:56.000000000 -0500
++++ Discord/discord.desktop	2023-03-13 21:43:47.784148596 -0400
+@@ -4,7 +4,7 @@
+ Comment=All-in-one voice and text chat for gamers that's free, secure, and works on both your desktop and phone.
+ GenericName=Internet Messenger
+ Exec=/usr/share/discord/Discord
+-Icon=discord
++Icon=/usr/share/discord/discord.png
+ Type=Application
+ Categories=Network;InstantMessaging;
+-Path=/usr/bin
++Path=/usr/share
