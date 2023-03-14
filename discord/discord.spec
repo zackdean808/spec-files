@@ -1,11 +1,11 @@
 Name:           discord
-Version:        0.0.20
-Release:        10%{?dist}
+Version:        0.0.25
+Release:        1%{?dist}
 Summary:        This is a community supported spec file for packaging discord as an rpm. 
 
 License:        GPL-2.0
 URL:            https://discord.com/download
-Source0:        discord-0.0.20.tar.gz
+Source0:        discord-0.0.25.tar.gz
 
 
 
@@ -41,8 +41,8 @@ install %{_builddir}/Discord/resources.pak $RPM_BUILD_ROOT/%{_datarootdir}/disco
 install %{_builddir}/Discord/snapshot_blob.bin $RPM_BUILD_ROOT/%{_datarootdir}/discord/
 install %{_builddir}/Discord/v8_context_snapshot.bin $RPM_BUILD_ROOT/%{_datarootdir}/discord/
 install -d %{_builddir}/Discord/locales $RPM_BUILD_ROOT/%{_datarootdir}/discord/
-cp -r  %{_builddir}/Discord/swiftshader $RPM_BUILD_ROOT/%{_datarootdir}/discord/
-cp -r  %{_builddir}/Discord/resources $RPM_BUILD_ROOT/%{_datarootdir}/discord/
+cp -a  %{_builddir}/Discord/swiftshader $RPM_BUILD_ROOT/%{_datarootdir}/discord/
+cp -a  %{_builddir}/Discord/resources $RPM_BUILD_ROOT/%{_datarootdir}/discord/
 
 %files
 %attr(0744, root, root)
@@ -70,6 +70,9 @@ cp -r  %{_builddir}/Discord/resources $RPM_BUILD_ROOT/%{_datarootdir}/discord/
 %{_datarootdir}/discord/resources/build_info.json
 
 %changelog
+* Mon Mar 13 2023 Zack D. <zack.dean@gmail.com> 
+  - New Version -> 0.25
+  - bug fix of cp -r to cp -a 
 * Sun Oct 02 2022 Zack D. <zack.dean@gmail.com>
 - New version 
 - Moved evertying to /%{_datarootdir} 
