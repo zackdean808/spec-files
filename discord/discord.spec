@@ -27,6 +27,7 @@ install -d $RPM_BUILD_ROOT/%{_datarootdir}/discord/resources/
 
 install %{_builddir}/Discord/chrome_100_percent.pak $RPM_BUILD_ROOT/%{_datarootdir}/discord/
 install %{_builddir}/Discord/chrome_200_percent.pak $RPM_BUILD_ROOT/%{_datarootdir}/discord/
+install %{_builddir}/Discord/chrome_crashpad_handler $RPM_BUILD_ROOT/%{_datarootdir}/discord/
 install %{_builddir}/Discord/chrome-sandbox $RPM_BUILD_ROOT/%{_datarootdir}/discord/
 install %{_builddir}/Discord/Discord $RPM_BUILD_ROOT/%{_datarootdir}/discord/
 install %{_builddir}/Discord/discord.desktop $RPM_BUILD_ROOT/%{_datarootdir}/applications/
@@ -40,6 +41,7 @@ install %{_builddir}/Discord/postinst.sh $RPM_BUILD_ROOT/%{_datarootdir}/discord
 install %{_builddir}/Discord/resources.pak $RPM_BUILD_ROOT/%{_datarootdir}/discord/
 install %{_builddir}/Discord/snapshot_blob.bin $RPM_BUILD_ROOT/%{_datarootdir}/discord/
 install %{_builddir}/Discord/v8_context_snapshot.bin $RPM_BUILD_ROOT/%{_datarootdir}/discord/
+install %{_builddir}/Discord/vk_swiftshader_icd.json $RPM_BUILD_ROOT/%{_datarootdir}/discord/
 install -d %{_builddir}/Discord/locales $RPM_BUILD_ROOT/%{_datarootdir}/discord/
 cp -a  %{_builddir}/Discord/resources $RPM_BUILD_ROOT/%{_datarootdir}/discord/
 
@@ -47,6 +49,7 @@ cp -a  %{_builddir}/Discord/resources $RPM_BUILD_ROOT/%{_datarootdir}/discord/
 %attr(0744, root, root)
 %{_datarootdir}/discord/chrome_100_percent.pak
 %{_datarootdir}/discord/chrome_200_percent.pak
+%{_datarootdir}/discord/chrome_crashpad_handler
 %{_datarootdir}/discord/chrome-sandbox
 %{_datarootdir}/discord/Discord
 %{_datarootdir}/applications/discord.desktop
@@ -62,6 +65,7 @@ cp -a  %{_builddir}/Discord/resources $RPM_BUILD_ROOT/%{_datarootdir}/discord/
 %{_datarootdir}/discord/resources.pak
 %{_datarootdir}/discord/snapshot_blob.bin
 %{_datarootdir}/discord/v8_context_snapshot.bin
+%{_datarootdir}/discord/vk_swiftshader_icd.json
 %{_datarootdir}/discord/resources/app.asar
 %{_datarootdir}/discord/resources/bootstrap/manifest.json
 %{_datarootdir}/discord/resources/build_info.json
@@ -70,6 +74,7 @@ cp -a  %{_builddir}/Discord/resources $RPM_BUILD_ROOT/%{_datarootdir}/discord/
 * Sun Apr 16 2023 Zack D.<zack.dean@gmail.com>
   - New version 0.0.26
   - Removing swiftshader files since they are no longer needed. 
+  - Tracking new files
 
 * Mon Mar 13 2023 Zack D. <zack.dean@gmail.com> 
   - Added patch0 to fix path in the /usr/share/applications directory 
