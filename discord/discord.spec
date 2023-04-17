@@ -41,7 +41,6 @@ install %{_builddir}/Discord/resources.pak $RPM_BUILD_ROOT/%{_datarootdir}/disco
 install %{_builddir}/Discord/snapshot_blob.bin $RPM_BUILD_ROOT/%{_datarootdir}/discord/
 install %{_builddir}/Discord/v8_context_snapshot.bin $RPM_BUILD_ROOT/%{_datarootdir}/discord/
 install -d %{_builddir}/Discord/locales $RPM_BUILD_ROOT/%{_datarootdir}/discord/
-cp -a  %{_builddir}/Discord/swiftshader $RPM_BUILD_ROOT/%{_datarootdir}/discord/
 cp -a  %{_builddir}/Discord/resources $RPM_BUILD_ROOT/%{_datarootdir}/discord/
 
 %files
