@@ -5,7 +5,7 @@ Summary:        This is a community supported spec file for packaging discord as
 
 License:        GPL-2.0
 URL:            https://discord.com/download
-Source0:        discord-0.0.25.tar.gz
+Source0:        discord-0.0.26.tar.gz
 Patch0:		desktop.patch
 
 
