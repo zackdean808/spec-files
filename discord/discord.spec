@@ -1,11 +1,11 @@
 Name:           discord
-Version:        0.0.26
+Version:        0.0.27
 Release:        2%{?dist}
 Summary:        This is a community supported spec file for packaging discord as an rpm. 
 
 License:        GPL-2.0
 URL:            https://discord.com/download
-Source0:        discord-0.0.26.tar.gz
+Source0:        discord-0.0.27.tar.gz
 Patch0:		desktop.patch
 
 
@@ -71,7 +71,10 @@ cp -a  %{_builddir}/Discord/resources $RPM_BUILD_ROOT/%{_datarootdir}/discord/
 %{_datarootdir}/discord/resources/build_info.json
 
 %changelog
-* Sun Apr 16 2023 Zack D.<zack.dean@gmail.com>
+* Thu Apr 27 2023 Zack D. <zack.dean@gmail.com> 
+  - New version 0.0.27
+
+* Sun Apr 16 2023 Zack D. <zack.dean@gmail.com>
   - New version 0.0.26
   - Removing swiftshader files since they are no longer needed. 
   - Tracking new files
