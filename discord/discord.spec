@@ -1,6 +1,6 @@
 Name:           discord
 Version:        0.0.27
-Release:        2%{?dist}
+Release:        1%{?dist}
 Summary:        This is a community supported spec file for packaging discord as an rpm. 
 
 License:        GPL-2.0
