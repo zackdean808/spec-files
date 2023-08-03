@@ -47,3 +47,9 @@ jobs:
       - name: copy patch into place 
         run: cp $GITHUB_WORKSPACE/discord/desktop.patch ~/rpmbuild/SOURCES
 
+      - name: Copy tar.gz into place
+        run: cp $GITHUB_WORKSPACE/discord/sources/discord*.tar.gz ~/rpmbuild/SOURCES
+
+      - name: build rpm 
+        run: rpmbuild -ba ~/rpmbuild/SPECS/discord.spec
+
