@@ -55,3 +55,9 @@ jobs:
 
       - name: build discord rpm
         run: rpmbuild -ba ~/rpmbuild/SPECS/discord.spec
+
+      - name: Publish new packages
+        uses: actions/upload-artifact@v3
+        with:
+          name: discord-rpms-for-download
+          path: ~/rpmbuild/RPMS/x86_64/
