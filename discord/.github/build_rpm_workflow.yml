@@ -1,0 +1,6 @@
+---
+name: build discord rpm 
+run-name: ${{ github.actor }} is building an rpm
+on: [push]
+jobs:
+
