@@ -30,7 +30,7 @@ jobs:
         run: sudo apt install rpm 
 
       - name: Set up build tree
-        run: mkdir ~/rpmbuild{SOURCES,RPMS,BUILDROOT,SRPMS}
+        run: mkdir -p ~/rpmbuild{SOURCES,RPMS,BUILDROOT,SRPMS}
 
       - name: Verify build tree
         run: ls -la ~/rpmbuild
