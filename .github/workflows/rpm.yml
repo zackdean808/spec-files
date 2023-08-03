@@ -30,7 +30,7 @@ jobs:
         run: sudo apt install rpm 
 
       - name: Set up build tree
-        run: mkdir -p ~/rpmbuild/{SOURCES,RPMS,BUILDROOT,SRPMS}
+        run: mkdir -p ~/rpmbuild/{SPECS,SOURCES,RPMS,BUILDROOT,SRPMS}
 
       - name: Verify build tree
         run: sudo ls -la ~/rpmbuild
@@ -53,4 +53,5 @@ jobs:
       - name: move into rpmbuild dir 
         run: cd ~/rpmbuild
 
-
+      - name: build discord rpm
+        run: rpmbuild -ba SPECS/discord.spec
