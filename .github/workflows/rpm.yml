@@ -30,10 +30,10 @@ jobs:
         run: sudo apt install rpm 
 
       - name: Set up build tree
-        run: mkdir -p ~/rpmbuild{SOURCES,RPMS,BUILDROOT,SRPMS}
+        run: sudo mkdir -p ~/rpmbuild{SOURCES,RPMS,BUILDROOT,SRPMS}
 
       - name: Verify build tree
-        run: ls -la ~/rpmbuild
+        run: sudo ls -la ~/rpmbuild
 
       - name: print path to working dir
         run: echo $GITHUB_WORKSPACE
