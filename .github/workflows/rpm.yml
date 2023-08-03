@@ -51,6 +51,6 @@ jobs:
         run: cp $GITHUB_WORKSPACE/discord/sources/discord*.tar.gz ~/rpmbuild/SOURCES
 
       - name: move into rpmbuild dir 
-        run: mv ~/rpmbuild
+        run: cd ~/rpmbuild
 
 
