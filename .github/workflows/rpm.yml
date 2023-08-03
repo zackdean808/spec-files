@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Install rpm build tools  
-        run: apt install rpmdevtools rpmlint 
+        run: sudo apt install rpmdevtools rpmlint 
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
