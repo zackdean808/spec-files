@@ -32,6 +32,9 @@ jobs:
       - name: Set up build tree
         run: mkdir ~/rpmbuild{SOURCES,RPMS,BUILDROOT,SRPMS}
 
+      - name: print path to working dir
+        run: echo GITHUB_WORKSPACE
+
       - name: Copy spec file into place 
         run: cp $GITHUB_WORKSPACE/discord.spec ~/rpmbuild/SPECS
 
