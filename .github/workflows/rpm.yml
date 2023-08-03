@@ -54,4 +54,4 @@ jobs:
         run: cd ~/rpmbuild
 
       - name: build discord rpm
-        run: rpmbuild -ba SPECS/discord.spec
+        run: rpmbuild -ba ~/rpmbuild/SPECS/discord.spec
