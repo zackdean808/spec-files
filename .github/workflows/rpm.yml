@@ -32,6 +32,9 @@ jobs:
       - name: Set up build tree
         run: mkdir ~/rpmbuild{SOURCES,RPMS,BUILDROOT,SRPMS}
 
+      - name: Verify build tree
+        run: ls -la ~/rpmbuild
+
       - name: print path to working dir
         run: echo $GITHUB_WORKSPACE
 
