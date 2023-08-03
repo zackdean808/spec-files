@@ -39,8 +39,8 @@ jobs:
         run: ls -la $GITHUB_WORKSPACE
 
       - name: Copy spec file into place 
-        run: cp $GITHUB_WORKSPACE/discord.spec ~/rpmbuild/SPECS
+        run: cp $GITHUB_WORKSPACE/discord/discord.spec ~/rpmbuild/SPECS
 
       - name: copy patch into place 
-        run: cp $GITHUB_WORKSPACE/desktop.patch ~/rpmbuild/SOURCES
+        run: cp $GITHUB_WORKSPACE/discord/desktop.patch ~/rpmbuild/SOURCES
 
