@@ -71,6 +71,9 @@ cp -a  %{_builddir}/Discord/resources $RPM_BUILD_ROOT/%{_datarootdir}/discord/
 %{_datarootdir}/discord/resources/build_info.json
 
 %changelog
+* Sun Sep 03 2023 Zack D. <zack.dean@gmail.com>
+  - New version 0.0.29
+
 * Wed Jul 12 2023 Zack D. <zack.dean@gmail.com> 
   - New version 0.0.28
 
