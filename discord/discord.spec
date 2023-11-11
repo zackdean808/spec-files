@@ -1,11 +1,11 @@
 Name:           discord
-Version:        0.0.28
+Version:        0.0.34
 Release:        1%{?dist}
 Summary:        This is a community supported spec file for packaging discord as an rpm. 
 
 License:        GPL-2.0
 URL:            https://discord.com/download
-Source0:        discord-0.0.28.tar.gz
+Source0:        discord-0.0.34.tar.gz
 Patch0:		desktop.patch
 
 
@@ -71,6 +71,9 @@ cp -a  %{_builddir}/Discord/resources $RPM_BUILD_ROOT/%{_datarootdir}/discord/
 %{_datarootdir}/discord/resources/build_info.json
 
 %changelog
+* Sat Nov 11 2023 Zack D. <zack.dean@gmail.com>
+  - New version 0.0.34
+
 * Sun Sep 03 2023 Zack D. <zack.dean@gmail.com>
   - New version 0.0.29
 
